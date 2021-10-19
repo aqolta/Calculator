@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;  
+using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using Calculator.Domain;
 using Calculator.Domain.Model;
-using Calculator.Infrastructure.Repositories; 
+using Calculator.Infrastructure.Repositories;
 
 namespace Calculator.Infrastructure
 {
@@ -13,16 +13,14 @@ namespace Calculator.Infrastructure
         private readonly CalculatorDBContext dbContext;
         private readonly ILogger<UnitOfWork> logger;
 
-        public UnitOfWork(
-            IDatabaseConnectionString databaseConnectionString,
-            ILogger<UnitOfWork> logger)
+        public UnitOfWork(IDatabaseConnectionString databaseConnectionString, ILogger<UnitOfWork> logger)
         {
             dbContext = new CalculatorDBContext(databaseConnectionString.ConnectionString);
             this.logger = logger;
         }
 
         private IOperationRepository operationRepository;
-         
+
         public IOperationRepository OperationRepository => operationRepository ??= new OperationRepository(dbContext);
 
         public int SaveChanges()
@@ -32,11 +30,6 @@ namespace Calculator.Infrastructure
             logger.LogDebug($"Persisted repository changes to database successfully. [{saveChangesResult} records changed]");
 
             return saveChangesResult;
-        }
-
-        public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-        {
-            return await dbContext.SaveChangesAsync(cancellationToken);
         }
     }
 }

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Calculator.Infrastructure.Migrations
 {
     [DbContext(typeof(CalculatorDBContext))]
-    [Migration("20211019025217_initialMigration")]
+    [Migration("20211019035239_initialMigration")]
     partial class initialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,10 +31,6 @@ namespace Calculator.Infrastructure.Migrations
                     b.Property<string>("Equation")
                         .HasColumnType("nvarchar(max)")
                         .HasColumnName("equation");
-
-                    b.Property<bool>("IsRemoved")
-                        .HasColumnType("bit")
-                        .HasColumnName("isremoved");
 
                     b.HasKey("Id")
                         .HasName("pk_operations");

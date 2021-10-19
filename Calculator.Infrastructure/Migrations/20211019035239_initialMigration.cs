@@ -12,8 +12,7 @@ namespace Calculator.Infrastructure.Migrations
                 {
                     id = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    equation = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    isremoved = table.Column<bool>(type: "bit", nullable: false)
+                    equation = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {

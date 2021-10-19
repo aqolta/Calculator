@@ -9,8 +9,5 @@ namespace Calculator.Domain
         IOperationRepository OperationRepository { get; }
 
         int SaveChanges();
-        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
-
-
     }
 }
