@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Domain", "Calcul
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.Infrastructure", "Calculator.Infrastructure\Calculator.Infrastructure.csproj", "{C5FC7C1F-5507-4F8F-B43C-FE85666CE956}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B31A736F-BDCF-4C33-9F2C-5E10455806F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.API.IntegrationTest", "Calculator.API.IntegrationTest\Calculator.API.IntegrationTest.csproj", "{D14D84C6-227B-46C0-A670-A52C50860FA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +31,16 @@ Global
 		{C5FC7C1F-5507-4F8F-B43C-FE85666CE956}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5FC7C1F-5507-4F8F-B43C-FE85666CE956}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5FC7C1F-5507-4F8F-B43C-FE85666CE956}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D14D84C6-227B-46C0-A670-A52C50860FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14D84C6-227B-46C0-A670-A52C50860FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14D84C6-227B-46C0-A670-A52C50860FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14D84C6-227B-46C0-A670-A52C50860FA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D14D84C6-227B-46C0-A670-A52C50860FA9} = {B31A736F-BDCF-4C33-9F2C-5E10455806F3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EFF3A683-73B2-4330-8CDD-8096103BFA31}
