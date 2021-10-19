@@ -4,13 +4,13 @@ using Calculator.Domain.Base.Model;
 
 namespace Calculator.Domain.Base.Model
 {
-    public interface IRepository<TAggregateRoot> where TAggregateRoot : Entity, IAggregateRoot
+    public interface IRepository<T> where T : Entity
     {
-        void Add(TAggregateRoot entity);
-        void Update(TAggregateRoot entity);
-        Maybe<TAggregateRoot> GetById(object id);
-        void Remove(TAggregateRoot entity);
-        void RemoveRange(IEnumerable<TAggregateRoot> entities);
-        IEnumerable<TAggregateRoot> GetAll();
+        void Add(T entity);
+        void Update(T entity);
+        Maybe<T> GetById(object id);
+        void Remove(T entity);
+        void RemoveRange(IEnumerable<T> entities);
+        IEnumerable<T> GetAll();
     }
 }

@@ -4,7 +4,7 @@ using Calculator.Domain.Base.Model;
 
 namespace Calculator.Domain.Model
 {
-    public class Operation : Entity, IAggregateRoot
+    public class Operation : Entity
     {
         public long Id { get; set; }
         public string Equation { get; set; }

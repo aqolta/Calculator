@@ -10,7 +10,7 @@ using Calculator.Domain.Base.Model;
 
 namespace Calculator.Infrastructure.Repositories
 {
-    internal class Repository<TAggregateRoot> : IRepository<TAggregateRoot> where TAggregateRoot : Entity, IAggregateRoot
+    internal class Repository<TAggregateRoot> : IRepository<TAggregateRoot> where TAggregateRoot : Entity
     {
         private readonly CalculatorDBContext dbContext;
         private DbSet<TAggregateRoot> entitySet;

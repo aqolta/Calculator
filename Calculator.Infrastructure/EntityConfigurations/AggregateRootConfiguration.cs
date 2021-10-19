@@ -5,7 +5,7 @@ using Calculator.Domain.Base.Model;
 namespace Calculator.Infrastructure.EntityConfigurations
 {
     internal abstract class AggregateRootConfiguration<TAggregateRoot> : IEntityTypeConfiguration<TAggregateRoot>
-                                                                       where TAggregateRoot : Entity, IAggregateRoot
+                                                                       where TAggregateRoot : Entity
     {
         public virtual void Configure(EntityTypeBuilder<TAggregateRoot> builder)
         {
